@@ -2,14 +2,11 @@
   description = "Nixos config flake";
 
   inputs = rec {
-    #nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixpkgs = nixpkgs-unstable;
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -21,31 +18,63 @@
 
     stylix.url = "github:danth/stylix/release-24.05";
 
-    plugin-nvim-transparent.url = "github:xiyaowong/transparent.nvim";
-    plugin-nvim-transparent.flake = false;
-
-    sops-nix.url = "github:Mic92/sops-nix";
-
     nvf.url = "github:notashelf/nvf";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nvf, ... }@inputs:
-  let 
+  let
     system = "x86_64-linux";
-    pkgs-unstable = import nixpkgs-unstable {inherit system;};
-      in
-  { 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  in {
+    nixosConfigurations = {
+      nixos-desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit system;
+          isDesktop = true;
+        };
+        modules = [
+          ./hosts/desktop/hardware-configuration.nix
+          ./configuration.nix
+
+          ./system/bootloader.nix
+          ./system/greetd.nix
+          ./system/locale.nix
+          ./system/nvf-configuration.nix
+          ./system/packages.nix
+          ./system/stylix.nix
+
+          ./user/users.nix
+
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          inputs.nvf.nixosModules.default
+        ];
+      };
+    };
+
+    nixos-laptop = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs pkgs-unstable;
-        inherit system;
+          inherit inputs;
+          inherit system;
+          isLaptop = true;
       };
       modules = [
+        ./hosts/laptop/hardware-configuration.nix
         ./configuration.nix
+
+        ./system/bootloader.nix
+        ./system/greetd.nix
+        ./system/locale.nix
+        ./system/nvf-configuration.nix
+        ./system/packages.nix
+        ./system/stylix.nix
+
+        ./user/users.nix
+
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
-	inputs.nvf.nixosModules.default
+        inputs.nvf.nixosModules.default
       ];
-    }; 
+    };
   };
 }

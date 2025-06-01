@@ -1,91 +1,17 @@
-{ inputs, config, pkgs, pkgs-unstable, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
-      inputs.sops-nix.nixosModules.sops
       inputs.hyprland.nixosModules.default
-      ./bootloader.nix
-      ./greetd.nix
-      ./nvf-configuration.nix
     ];
-
-  #enable KVM
-  boot.kernelModules = [ "kvm-amd" ];
   
   #use the latest linux kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  #Themes!
-
-  stylix = {
-    override = {
-      base00 = "#1d2021"; # ----
-      base01 = "#3c3836"; # ---
-      base02 = "#504945"; # --
-      base03 = "#665c54"; # -
-      base04 = "#bdae93"; # +
-      base05 = "#d5c4a1"; # ++
-      base06 = "#ebdbb2"; # +++
-      base07 = "#fbf1c7"; # ++++
-      base08 = "#fb4934"; # red
-      base09 = "#fe8019"; # orange
-      base0A = "#fabd2f"; # yellow
-      base0B = "#b8bb26"; # green
-      base0C = "#8ec07c"; # aqua/cyan
-      base0D = "#83a598"; # blue
-      base0E = "#d3869b"; # purple
-      base0F = "#d65d0e"; # brown
-    };
-    image = ./pbmam94nqapc1.png;
-    enable = true;
-    autoEnable = true;
-
-    targets = {
-      grub.enable = false;
-      
-    };
-
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-    };
-
-    fonts = {
-      serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
-      };
-      sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
-      };
-
-      monospace = {
-        package = pkgs.nerd-fonts.blex-mono;
-        name = "BlexMono Nerd Font Mono";
-      };
-
-      sizes = {
-	    applications = 12;
-	    terminal = 15;
-	    popups = 10;
-      };
-    };
-
-    opacity = {
-      applications = 1.0;
-      terminal = 1.0;
-      popups = 1.0;
-    };
-
-    polarity = "dark";
-  };
-
   
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -94,33 +20,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Denver";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-    ];
-  };
 
   # XDG Portals
   xdg = {
@@ -150,10 +49,6 @@
 	variant = "";
       };
       excludePackages = [ pkgs.xterm pkgs.x11_ssh_askpass ];
-      #displayManager.gdm = {
-      # enable = true;
-      # wayland = true;
-      #};
     };
     libinput.enable = true;
     dbus.enable = true;
@@ -228,19 +123,7 @@
     };
   };
 
-  fonts.packages = with pkgs; [
-    ipafont
-    migu
-    vistafonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    garamond-libre
-    corefonts
-  ];
-
-  fonts.fontDir.enable = true;
-
+  #hardware agnostic graphics configurations
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -249,106 +132,8 @@
     ];
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.norsemangef = {
-    isNormalUser = true;
-    description = "norsemangef";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd" ];
-    packages = with pkgs; [
-      sidequest
-      heroic
-      superTuxKart
-      prismlauncher
-    ];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs pkgs-unstable; };
-    users = {
-      "norsemangef" = import ./home.nix;
-    };
-    sharedModules = [{
-      stylix.targets.waybar.enable = false;
-      stylix.targets.hyprland.enable = false;
-      stylix.targets.vscode.enable = false;
-      stylix.targets.mako.enable = false;
-    }];
-    backupFileExtension = "backup";
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  home-manager.useGlobalPkgs = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = (with pkgs; [
-    polkit
-    polkit_gnome
-    gparted
-    neovim
-    alacritty
-    dunst
-    wlr-randr
-    wl-clipboard
-    hyprpicker
-    swww
-    wofi
-    firefox-wayland
-    qt5.qtwayland
-    qt6.qmake
-    qt6.qtwayland
-    adwaita-qt
-    adwaita-qt6
-    pavucontrol
-    git
-    hyprlock
-    fastfetch
-    wine
-    wine-wayland
-    hyprshot
-    protontricks
-    lutris
-    vesktop
-    unzip
-    qemu
-    quickemu
-    gimp
-    i2c-tools
-    sops
-    bottles
-    usbutils
-    udiskie
-    musikcube
-    nicotine-plus
-    protonvpn-gui
-    networkmanagerapplet
-    jdk17
-    signal-desktop-bin
-    mov-cli
-    mpv
-    sidequest
-    ungoogled-chromium
-    wordgrinder
-    libreoffice
-    xdg-utils
-    wget
-    mangohud
-    brave
-    git-credential-manager
-    sidequest
-    lact
-    nvtopPackages.amd
-  ])
-  ++( with pkgs-unstable; [
-    floorp
-    proton-pass
-    vkquake
-  ]);
-
-  #enable LACT for AMD GPU
-  systemd.packages = with pkgs; [ lact ];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   nix.gc = {
     dates = "daily";
