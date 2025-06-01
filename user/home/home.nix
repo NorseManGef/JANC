@@ -9,6 +9,8 @@
     ./../userPackages.nix
     ./dunst.nix
     ./shell-settings.nix
+    ./waybar.nix
+    ./hyprland.nix
   ];
 
   gtk = {
