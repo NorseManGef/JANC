@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, isDesktop, ... }:
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -9,7 +9,10 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { 
+      inherit inputs; 
+      inherit isDesktop; 
+    };
     users = {
       "norsemangef" = import ./home/home.nix;
     };
