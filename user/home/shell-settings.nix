@@ -1,4 +1,4 @@
-{ ... }:
+{ isDesktop, ... }:
 
 {
   programs = {
@@ -11,14 +11,14 @@
       enable = true;
       enableCompletion = true;
       shellAliases = {
-        nswitch = "sudo nixos-rebuild switch --flake ~/nixos/#nixos";
-        nswitch-upgrade = "cd ~/nixos && sudo nix flake update && sudo nixos-rebuild switch --upgrade --flake ~/nixos/#nixos";
-		    ntest = "sudo nixos-rebuild test --flake ~/nixos/#nixos";
-		    nboot = "sudo nixos-rebuild boot --flake ~/nixos/#nixos";
+        nswitch = if isDesktop then "sudo nixos-rebuild switch --flake ~/nixos/#nixos-desktop" else "sudo nixos-rebuild switch --flake ~/nixos/#nixos-laptop";
+        nswitch-upgrade = if isDesktop then "cd ~/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake ~/nixos/#nixos-desktop" else "cd ~/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake ~/nixos/#nixos-laptop";
+		    ntest = if isDesktop then "sudo nixos-rebuild test --flake ~/nixos/#nixos-desktop" else "sudo nixos-rebuild test --flake ~/nixos/#nixos-laptop";
+		    nboot = if isDesktop then "sudo nixos-rebuild boot --flake ~/nixos/#nixos-desktop" else "sudo nixos-rebuild boot --flake ~/nixos/#nixos-laptop";
 		    fetch = "fastfetch";
         edflake = "cd ~/nixos/ && nvim flake.nix";
         svim = "sudo -E -s nvim";
-        winboot = "grub-reboot \"Windows Boot Manager (on /dev/nvme1n1p1)\"";
+        winboot = if isDesktop then "sudo grub-reboot \"Windows Boot Manager (on /dev/nvme1n1p1)\" && reboot" else "echo \"You're on your laptop silly, there's now winblows here\"";
       };
     };
     starship = {
