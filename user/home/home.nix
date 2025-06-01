@@ -66,7 +66,7 @@
 		    fetch = "fastfetch";
         edflake = "cd ~/nixos/ && nvim flake.nix";
         svim = "sudo -E -s nvim";
-        winboot = "grub-reboot 3";
+        winboot = "grub-reboot \"Windows Boot Manager (on /dev/nvme1n1p1)\"";
       };
     };
     starship = {
