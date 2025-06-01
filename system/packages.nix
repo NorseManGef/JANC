@@ -63,5 +63,6 @@
     floorp
     proton-pass
     vkquake
+    grub2
   ];
 }

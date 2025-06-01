@@ -63,10 +63,7 @@
         nswitch-upgrade = "cd ~/nixos && sudo nix flake update && sudo nixos-rebuild switch --upgrade --flake ~/nixos/#nixos";
 		    ntest = "sudo nixos-rebuild test --flake ~/nixos/#nixos";
 		    nboot = "sudo nixos-rebuild boot --flake ~/nixos/#nixos";
-		    nshutdown = "sudo nixos-rebuild boot --flake ~/nixos/#nixos && shutdown now";
 		    fetch = "fastfetch";
-		    edhome = "cd ~/nixos/ && nvim home.nix";
-		    edconf = "cd ~/nixos/ && nvim configuration.nix";
         edflake = "cd ~/nixos/ && nvim flake.nix";
         svim = "sudo -E -s nvim";
         winboot = "grub-reboot 3";

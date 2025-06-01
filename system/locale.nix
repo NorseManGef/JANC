@@ -28,7 +28,7 @@
     ];
   };
 
-    fonts.packages = with pkgs; [
+  fonts.packages = with pkgs; [
     ipafont
     migu
     vistafonts
