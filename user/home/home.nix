@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, pkgs-unstable, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
  home.username = "norsemangef";
@@ -10,12 +10,15 @@
   home.packages = [
     pkgs.hello
     pkgs.zoxide
-	pkgs.fzf
+	  pkgs.fzf
     pkgs.atuin
     pkgs.dunst
     pkgs.btop
     pkgs.onlyoffice-bin
     pkgs.kdePackages.kdenlive
+    pkgs.heroic
+    pkgs.superTuxKart
+    pkgs.prismlauncher
   ];
 
   services = {
@@ -265,7 +268,7 @@
     
     #systemd.enable = false;
     
-    package = pkgs-unstable.hyprland;
+    package = pkgs.hyprland;
 
     settings = { 
 

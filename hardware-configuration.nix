@@ -6,6 +6,8 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
+
+      ./extra-hardware-configuration.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" ];

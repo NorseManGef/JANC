@@ -21,11 +21,6 @@
 
     stylix.url = "github:danth/stylix/release-24.05";
 
-    plugin-nvim-transparent.url = "github:xiyaowong/transparent.nvim";
-    plugin-nvim-transparent.flake = false;
-
-    sops-nix.url = "github:Mic92/sops-nix";
-
     nvf.url = "github:notashelf/nvf";
   };
 
@@ -42,9 +37,19 @@
       };
       modules = [
         ./configuration.nix
+        
+        ./system/bootloader.nix
+        ./system/greetd.nix
+        ./system/locale.nix
+        ./system/nvf-configuration.nix
+        ./system/packages.nix
+        ./system/stylix.nix
+
+        ./user/users.nix
+
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
-	inputs.nvf.nixosModules.default
+	      inputs.nvf.nixosModules.default
       ];
     }; 
   };
