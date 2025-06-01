@@ -22,18 +22,46 @@
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nvf, ... }@inputs:
-  let 
+  let
     system = "x86_64-linux";
-  in
-  { 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  in {
+    nixosConfigurations = {
+      nixos-desktop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit system;
+          isDesktop = true;
+        };
+        modules = [
+          ./hosts/desktop/hardware-configuration.nix
+          ./configuration.nix
+
+          ./system/bootloader.nix
+          ./system/greetd.nix
+          ./system/locale.nix
+          ./system/nvf-configuration.nix
+          ./system/packages.nix
+          ./system/stylix.nix
+
+          ./user/users.nix
+
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          inputs.nvf.nixosModules.default
+        ];
+      };
+    };
+
+    nixos-laptop = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs;
-        inherit system;
+          inherit inputs;
+          inherit system;
+          isLaptop = true;
       };
       modules = [
+        ./hosts/laptop/hardware-configuration.nix
         ./configuration.nix
-        
+
         ./system/bootloader.nix
         ./system/greetd.nix
         ./system/locale.nix
@@ -45,8 +73,8 @@
 
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
-	      inputs.nvf.nixosModules.default
+        inputs.nvf.nixosModules.default
       ];
-    }; 
+    };
   };
 }
