@@ -49,10 +49,6 @@
 	variant = "";
       };
       excludePackages = [ pkgs.xterm pkgs.x11_ssh_askpass ];
-      #displayManager.gdm = {
-      # enable = true;
-      # wayland = true;
-      #};
     };
     libinput.enable = true;
     dbus.enable = true;
