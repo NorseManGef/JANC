@@ -14,7 +14,7 @@
         "HDMI-A-1, 1920x1080@60, 2560x500, 1"
       ];
 
-      exec-once = "swww init ; dunst";
+      exec-once = "swww-daemon ; dunst";
 
       exec = "${pkgs.protonvpn-gui}/bin/protonvpn-app";
 

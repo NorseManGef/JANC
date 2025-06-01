@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, isDesktop, ... }:
 
 {
   stylix = {
@@ -20,7 +20,7 @@
       base0E = "#d3869b"; # purple
       base0F = "#d65d0e"; # brown
     };
-    image = ./pbmam94nqapc1.png;
+    image = ./gruvbox-dark-rainbow.png;
     enable = true;
     autoEnable = true;
 
