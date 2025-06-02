@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, isDesktop, ... }:
 
 {
   programs = {
@@ -9,9 +9,11 @@
           layer = "top";
           position = "top";
           height = 41;
-          output = [
+          output = if isDesktop == true then [
             "DP-3"
             "HDMI-A-1"
+          ] else [
+              "eDP-1"
           ];
           modules-left = [ "tray" "hyprland/window" ];
           modules-center = [ "custom/hello-from-waybar" "hyprland/workspaces" ];
