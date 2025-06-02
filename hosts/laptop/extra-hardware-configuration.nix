@@ -11,5 +11,5 @@
     offload.enableOffloadCmd = true;
   };
   
-  environment.systemPackages = [ pkgs.nvtopPackages.nvidia pkgs.nvtopPackages.intel ];
+  environment.systemPackages = [ pkgs.nvtopPackages.full ];
 }
