@@ -21,7 +21,7 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, nvf, ... }@inputs:
+  outputs = { self, nixpkgs, nvf, ... }@inputs: 
   let
     system = "x86_64-linux";
   in {
@@ -50,31 +50,31 @@
           inputs.nvf.nixosModules.default
         ];
       };
-    };
 
-    nixos-laptop = nixpkgs.lib.nixosSystem {
-      specialArgs = {
+      nixos-laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
           inherit inputs;
           inherit system;
           isLaptop = true;
+        };
+        modules = [
+          ./hosts/laptop/hardware-configuration.nix
+          ./configuration.nix
+
+          ./system/bootloader.nix
+          ./system/greetd.nix
+          ./system/locale.nix
+          ./system/nvf-configuration.nix
+          ./system/packages.nix
+          ./system/stylix.nix
+
+          ./user/users.nix
+
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          inputs.nvf.nixosModules.default
+        ];
       };
-      modules = [
-        ./hosts/laptop/hardware-configuration.nix
-        ./configuration.nix
-
-        ./system/bootloader.nix
-        ./system/greetd.nix
-        ./system/locale.nix
-        ./system/nvf-configuration.nix
-        ./system/packages.nix
-        ./system/stylix.nix
-
-        ./user/users.nix
-
-        inputs.home-manager.nixosModules.default
-        inputs.stylix.nixosModules.stylix
-        inputs.nvf.nixosModules.default
-      ];
     };
   };
 }
