@@ -162,6 +162,10 @@
         "10,monitor:HDMI-A-1"
       ];
 
+      gestures = if isDesktop == false then {
+        workspace_swipe = "true";
+      } else {}; 
+
       misc = {
         vrr = "1";
       };
