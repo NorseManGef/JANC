@@ -59,7 +59,6 @@
     git-credential-manager
     sidequest
     lact
-    nvtopPackages.amd
     floorp
     proton-pass
     vkquake

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   hardware.nvidia.open = true;
@@ -10,4 +10,6 @@
     offload.enable = true;
     offload.enableOffloadCmd = true;
   };
+  
+  environment.systemPackages = [ pkgs.nvtopPackages.nvidia pkgs.nvtopPackages.intel ];
 }

@@ -7,4 +7,6 @@
   #enable LACT for AMD GPU
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
+
+  environment.systemPackages = [ pkgs.nvtopPackages.amd ];
 }
