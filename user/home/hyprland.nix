@@ -1,4 +1,4 @@
-{ pkgs, ...}: 
+{ pkgs, isDesktop, ...}: 
 
 {
   wayland.windowManager.hyprland = {
@@ -9,16 +9,18 @@
     package = pkgs.hyprland;
 
     settings = {
-      monitor = [
+      monitor = if isDesktop == true then [
         "DP-3, 2560x1440@165, 0x0, 1"
         "HDMI-A-1, 1920x1080@60, 2560x500, 1"
+      ] else [
+        "eDP-1, 1920x1080@144, 0x0, 1"
       ];
 
       exec-once = "swww-daemon ; dunst";
 
       exec = "${pkgs.protonvpn-gui}/bin/protonvpn-app";
 
-      env = "XCURSOR_SIZE,24";
+      env = if isDesktop == true then "XCURSOR_SIZE,24" else [ "XCURSOR_SIZE,24" "LIBVA_DRIVER_NAME,nvidia" "LIBVA_DRIVER_NAME,nvidia" ];
 
       input = {
         follow_mouse = "1";
@@ -33,6 +35,7 @@
         "col.inactive_border" = "rgb(323232)";
         layout = "dwindle";
       };
+
 
       decoration = {
         rounding = "0";
@@ -74,7 +77,7 @@
         new_status = "master";
       };
 
-      "$mainMod" = "SUPER";
+      "$mainMod" = if isDesktop == true then "SUPER" else "ALT";
 
       bind = [
         # App binds

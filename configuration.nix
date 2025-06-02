@@ -44,10 +44,11 @@
     xserver = {
       enable = true;
       xkb = {
-	layout = "us";
-	variant = "";
+	      layout = "us";
+	      variant = "";
       };
       excludePackages = [ pkgs.xterm pkgs.x11_ssh_askpass ];
+      videoDrivers = if isDesktop == false then [ "nvidia" ] else [];
     };
     libinput.enable = true;
     dbus.enable = true;
