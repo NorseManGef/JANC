@@ -55,7 +55,7 @@
         specialArgs = {
           inherit inputs;
           inherit system;
-          isLaptop = true;
+          isDesktop = false;
         };
         modules = [
           ./hosts/laptop/hardware-configuration.nix
