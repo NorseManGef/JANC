@@ -2,7 +2,7 @@
   description = "Nixos config flake";
 
   inputs = rec {
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkg.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -21,7 +21,7 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nvf, ... }@inputs:
+  outputs = { self, nixpkgs, nvf, ... }@inputs:
   let
     system = "x86_64-linux";
   in {
