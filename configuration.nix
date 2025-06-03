@@ -48,7 +48,7 @@
 	      variant = "";
       };
       excludePackages = [ pkgs.xterm pkgs.x11_ssh_askpass ];
-      videoDrivers = if isDesktop == false then [ "nvidia" ] else [];
+      videoDrivers = if isDesktop == false then [ "modesetting" "nvidia" ] else [];
     };
     libinput.enable = true;
     dbus.enable = true;
