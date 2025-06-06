@@ -64,4 +64,8 @@
     vkquake
     grub2
   ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-7.0.20"
+  ];
 }

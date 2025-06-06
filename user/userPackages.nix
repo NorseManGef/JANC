@@ -13,5 +13,6 @@
     heroic
     superTuxKart
     prismlauncher
+    vintagestory
   ];
 }
