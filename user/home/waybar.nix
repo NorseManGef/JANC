@@ -9,7 +9,7 @@
           layer = "top";
           position = "top";
           height = 41;
-          output = if isDesktop == true then [
+          output = if isDesktop then [
             "DP-3"
             "HDMI-A-1"
           ] else [

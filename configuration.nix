@@ -10,7 +10,7 @@
   #use the latest linux kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
-  networking.hostName = if isDesktop == true then "nixos-desktop" else "nixos-laptop"; # Define your hostname.
+  networking.hostName = if isDesktop then "nixos-desktop" else "nixos-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

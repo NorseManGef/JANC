@@ -9,7 +9,7 @@
     package = pkgs.hyprland;
 
     settings = {
-      monitor = if isDesktop == true then [
+      monitor = if isDesktop then [
         "DP-3, 2560x1440@165, 0x0, 1"
         "HDMI-A-1, 1920x1080@60, 2560x500, 1"
       ] else [
@@ -20,7 +20,7 @@
 
       exec = "${pkgs.protonvpn-gui}/bin/protonvpn-app";
 
-      env = if isDesktop == true then "XCURSOR_SIZE,24" else [ "XCURSOR_SIZE,24" "LIBVA_DRIVER_NAME,nvidia" "LIBVA_DRIVER_NAME,nvidia" ];
+      env = if isDesktop then "XCURSOR_SIZE,24" else [ "XCURSOR_SIZE,24" "LIBVA_DRIVER_NAME,nvidia" "LIBVA_DRIVER_NAME,nvidia" ];
 
       input = {
         follow_mouse = "1";
@@ -77,7 +77,7 @@
         new_status = "master";
       };
 
-      "$mainMod" = if isDesktop == true then "SUPER" else "ALT";
+      "$mainMod" = if isDesktop then "SUPER" else "ALT";
 
       bind = [
         # App binds
