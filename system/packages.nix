@@ -46,8 +46,6 @@
     networkmanagerapplet
     jdk17
     signal-desktop-bin
-    mov-cli
-    python313Packages.devgoldyutils
     mpv
     sidequest
     ungoogled-chromium
