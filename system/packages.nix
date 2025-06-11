@@ -47,6 +47,7 @@
     jdk17
     signal-desktop-bin
     mov-cli
+    python313Packages.devgoldyutils
     mpv
     sidequest
     ungoogled-chromium
@@ -57,7 +58,6 @@
     mangohud
     brave
     git-credential-manager
-    sidequest
     lact
     floorp
     proton-pass
