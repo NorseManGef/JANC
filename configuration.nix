@@ -91,7 +91,7 @@
         thunar-volman
       ];
     };
-    ssh.startAgent = true;
+    #ssh.startAgent = true;
     adb.enable = true;
     steam = {
       enable = true;
