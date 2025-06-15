@@ -11,6 +11,7 @@
     ./shell-settings.nix
     ./waybar.nix
     ./hyprland.nix
+    ./textfox.nix
   ];
 
   gtk = {

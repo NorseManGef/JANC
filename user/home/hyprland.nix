@@ -82,7 +82,7 @@
       bind = [
         # App binds
         "$mainMod, Q, exec, alacritty"
-        "$mainMod, F, exec, floorp"
+        "$mainMod, F, exec, firefox"
         "$mainMod, D, exec, vesktop"
         "$mainMod, E, exec, thunar"
         "$mainMod, S, exec, steam"

@@ -1,8 +1,8 @@
 {
   description = "Nixos config flake";
 
-  inputs = rec {
-    nixpkg.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -19,6 +19,12 @@
     stylix.url = "github:danth/stylix/release-24.05";
 
     nvf.url = "github:notashelf/nvf";
+
+    textfox.url = "github:adriankarlen/textfox";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nvf, ... }@inputs: 
