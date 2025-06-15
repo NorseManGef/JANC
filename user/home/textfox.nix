@@ -3,8 +3,8 @@
 {
   imports = [ inputs.textfox.homeManagerModules.default ];
 
-  firefox.enable = true;
-  firefox.extensions = with inputs.firefox-addons.packages.${pkgs.system}; [ ublock-origin ];
+  programs.firefox.enable = true;
+  programs.firefox.profiles.textfox.extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [ ublock-origin ];
 
   textfox = {
     enable = true;
