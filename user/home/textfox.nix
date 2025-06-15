@@ -9,7 +9,6 @@
     #sidebery
     sponsorblock
     multi-account-containers
-    firefox-color
   ];
 
   textfox = {
