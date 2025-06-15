@@ -9,6 +9,7 @@
     #sidebery
     sponsorblock
     multi-account-containers
+    proton-pass
   ];
 
   textfox = {
