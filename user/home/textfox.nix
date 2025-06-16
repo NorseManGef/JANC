@@ -16,7 +16,7 @@
     enable = true;
     profile = "textfox";
     config = {
-      background.color = "#1d2021";
+      background.color = "#282828";
     };
   };
 }
