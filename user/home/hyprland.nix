@@ -167,7 +167,7 @@
       } else {}; 
 
       misc = {
-        vrr = "2";
+        vrr = "3";
       };
 
       experimental = {
