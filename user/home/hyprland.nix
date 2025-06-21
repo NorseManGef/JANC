@@ -27,6 +27,11 @@
         sensitivity = "-0.5";
       };
 
+      device = if isDesktop then {} else {
+        name = "ps/2-synaptics-touchpad";
+        sensitivity = "0.5";
+      }; 
+
       general = {
         gaps_in = "5";
         gaps_out = "20";
