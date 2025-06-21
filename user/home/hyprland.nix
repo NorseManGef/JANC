@@ -149,7 +149,7 @@
         "$mainMod, mouse:273, resizewindow"
       ];
 
-      workspace = [
+      workspace = if isDesktop then [
         "1,monitor:DP-3"
         "2,monitor:HDMI-A-1"
         "3,monitor:DP-3"
@@ -160,7 +160,7 @@
         "8,monitor:HDMI-A-1"
         "9,monitor:DP-3"
         "10,monitor:HDMI-A-1"
-      ];
+      ] else [];
 
       gestures = if isDesktop == false then {
         workspace_swipe = "true";
