@@ -86,6 +86,26 @@
         };
       };
 
+      diagnostics.nvim-lint = {
+        enable = true;
+        linters = {
+          cppcheck = {
+            name = "cppcheck";
+            cmd = "cppcheck";
+            #args = [ "--project=compile_commands.json" ];
+          };
+        };
+        linters_by_ft = {
+          cpp = [ "cppcheck" ];
+        };
+        lint_function = lib.mkLuaInline 
+        ''
+          function(buf)
+            require("lint").try_lint()
+          end
+        '';
+      };
+
       languages = {
         enableTreesitter = true;
         enableFormat = true;
