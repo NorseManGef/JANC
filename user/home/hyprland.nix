@@ -28,9 +28,9 @@
       };
 
       device = if isDesktop then {} else {
-        name = "ps/2-synaptics-touchpad";
-        sensitivity = "0.5";
-      }; 
+        name = "cust0001:00-06cb:cda1-touchpad";
+        sensitivity = "-0.25";
+      };
 
       general = {
         gaps_in = "5";
@@ -169,6 +169,7 @@
 
       gestures = if isDesktop == false then {
         workspace_swipe = "true";
+        workspace_swipe_distance = "150";
       } else {}; 
 
       misc = {
