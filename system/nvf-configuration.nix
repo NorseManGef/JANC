@@ -35,6 +35,33 @@
           silent = false;
           action = ":w<CR>";
         }
+        {
+          key = "gD";
+          mode = "n";
+          silent = true;
+          noremap = true;
+          action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
+        }
+        {
+          key = "gd";
+          mode = "n";
+          silent = true;
+          noremap = true;
+          action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+        }
+        {
+          key = "<Space>bd";
+          mode = "n";
+          silent = true;
+          noremap = true;
+          action = "<cmd>bd<CR>";
+        }
+        {
+          key = "jj";
+          mode = "i";
+          noremap = false;
+          action = "<Esc>";
+        }
       ];
 
       tabline = {
@@ -137,6 +164,10 @@
             
           };
         };
+      };
+
+      mini.animate = {
+        enable = true;
       };
 
       git = {
