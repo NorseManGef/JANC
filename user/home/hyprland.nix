@@ -84,7 +84,7 @@
 
       "$mainMod" = if isDesktop then "SUPER" else "ALT";
 
-      bind = [
+      bind = ([
         # App binds
         "$mainMod, Q, exec, alacritty"
         "$mainMod, F, exec, firefox"
@@ -142,7 +142,11 @@
         # Scroll through workspaces
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-      ];
+      ]) 
+        ++(if isDesktop then [] else [
+        "$mainMod, F9, exec, brightnessctl --class=backlight set +10%"
+        "$mainMod, F8, exec, brightnessctl --class=backlight set 10%-"
+      ]);
 
       binde = [
         "$mainMod, F3, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"

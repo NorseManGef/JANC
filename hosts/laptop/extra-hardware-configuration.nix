@@ -11,5 +11,5 @@
     offload.enableOffloadCmd = true;
   };
   
-  environment.systemPackages = [ pkgs.nvtopPackages.full ];
+  environment.systemPackages = [ pkgs.nvtopPackages.full pkgs.brightnessctl ];
 }
