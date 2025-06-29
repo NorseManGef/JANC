@@ -77,6 +77,26 @@
         })
       '';
 
+      autocmds = [ 
+        {
+          enable = true;
+          event = [
+            "BufNewFile"
+            "BufReadPre"
+            "FileReadPre"
+          ]; 
+          pattern = [
+            "*.cpp"
+            "*.h"
+            "*.inc"
+            "cpp"
+          ]; 
+          callback = lib.mkLuaInline '' 
+            function() vim.bo.tabstop = 4 end 
+          ''; 
+        } 
+      ];
+
       statusline.lualine.enable = true;
 
       lineNumberMode = "number";
