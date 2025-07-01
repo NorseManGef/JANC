@@ -2,7 +2,7 @@
 
 {
   hardware.nvidia.open = true;
-  hardware.nvidia.modesetting = true;
+  hardware.nvidia.modesetting.enable = true;
 
   hardware.nvidia.prime = {
     intelBusId = "PCI:0:2:0";
