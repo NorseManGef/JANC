@@ -8,7 +8,8 @@
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
 
-    sync.enable = true; 
+    offload.enable = true; 
+    offload.enableOffloadCmd = true;
   };
   
   environment.systemPackages = [ pkgs.nvtopPackages.full pkgs.brightnessctl ];
