@@ -18,8 +18,7 @@
 		    fetch = "fastfetch";
         edflake = "cd ~/nixos/ && nvim flake.nix";
         svim = "sudo -E -s nvim";
-        winboot = if isDesktop then "sudo grub-reboot \"Windows Boot Manager (on /dev/nvme1n1p1)\" && reboot" else "echo \"You're on your laptop silly, there's no winblows here\"";
-
+        winboot = if isDesktop then "sudo grub-reboot 2 && reboot" else "echo \"You're on your laptop silly, there's no winblows here\"";
         cppinit = "git init --template=~/Coding/C++/template";
       };
     };
