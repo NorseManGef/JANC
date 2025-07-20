@@ -29,14 +29,12 @@
     wine-wayland
     hyprshot
     protontricks
-    lutris
     vesktop
     unzip
     qemu
     quickemu
     gimp
     i2c-tools
-    sops
     bottles
     usbutils
     udiskie
@@ -54,10 +52,7 @@
     xdg-utils
     wget
     mangohud
-    brave
-    git-credential-manager
     lact
-    floorp
     proton-pass
     vkquake
     grub2
