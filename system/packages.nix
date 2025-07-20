@@ -61,6 +61,7 @@
     proton-pass
     vkquake
     grub2
+    protonplus
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
