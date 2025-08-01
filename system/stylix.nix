@@ -1,4 +1,4 @@
-{ pkgs, isDesktop, ... }:
+{ pkgs, ... }:
 
 {
   stylix = {
@@ -31,6 +31,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
+      size = 1;
     };
 
     fonts = {
