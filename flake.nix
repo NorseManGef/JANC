@@ -16,7 +16,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    stylix.url = "github:danth/stylix/release-24.05";
+    stylix = {
+      url = "github:nix-community/stylix/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nvf.url = "github:notashelf/nvf";
 
