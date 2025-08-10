@@ -1,4 +1,4 @@
-{ pkgs, isDesktop, ...}: 
+{ pkgs, lib, isDesktop, ...}: 
 
 {
   wayland.windowManager.hyprland = {
@@ -198,7 +198,7 @@
           no_fade_in = false;
         };
 
-        background = [
+        background = lib.mkForce [
           {
             monitor = "";
             path = "~/Pictures/walls/Animated-retro-city.png";
