@@ -8,7 +8,6 @@
     polkit_gnome
     gparted
     neovim
-    alacritty
     dunst
     wlr-randr
     wl-clipboard
