@@ -17,13 +17,12 @@
     };
 
     stylix = {
-      url = "github:nix-community/stylix/release-24.05";
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nvf.url = "github:notashelf/nvf";
 
-    textfox.url = "github:adriankarlen/textfox";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
