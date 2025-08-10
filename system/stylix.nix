@@ -22,10 +22,11 @@
     };
     image = ./gruvbox-dark-rainbow.png;
     enable = true;
-    autoEnable = true;
+    autoEnable = false;
 
     targets = {
-      grub.enable = false;
+      gtk.enable = true;
+      console.enable = true;
     };
 
     cursor = {
@@ -66,9 +67,11 @@
   };
 
   home-manager.sharedModules = [{
-      stylix.targets.waybar.enable = false;
-      stylix.targets.hyprland.enable = false;
-      stylix.targets.vscode.enable = false;
-      stylix.targets.mako.enable = false;
-    }];
+    stylix.targets = {
+      firefox.enable = true;
+      fcitx5.enable = true;
+      wofi.enable = true;
+      dunst.enable = true;
+    };
+  }];
 }
