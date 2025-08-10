@@ -6,8 +6,8 @@
     settings.vim = {
       theme = {
         enable = true;
-        name = "gruvbox";
-        style = "dark";
+        name = lib.mkForce "gruvbox";
+        style = lib.mkForce "dark";
       };
 
       options = {
