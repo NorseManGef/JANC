@@ -26,6 +26,7 @@
 
     targets = {
       grub.enable = false;
+      nvf.enable = false;
     };
 
     cursor = {
