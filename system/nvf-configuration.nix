@@ -137,14 +137,14 @@
       diagnostics.nvim-lint = {
         enable = true;
         linters = {
-          cppcheck = {
-            name = "cppcheck";
-            cmd = "cppcheck";
-            #args = [ "--project=compile_commands.json" ];
+          clang-tidy = {
+            name = "clangtidy";
+            cmd = "clang-tidy";
+            #args = [ ];
           };
         };
         linters_by_ft = {
-          cpp = [ "cppcheck" ];
+          cpp = [ "clangtidy" ];
         };
         lint_function = lib.mkLuaInline 
         ''
