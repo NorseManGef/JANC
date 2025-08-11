@@ -10,6 +10,7 @@
     sponsorblock
     multi-account-containers
     proton-pass
+    vimium
   ];
 
   textfox = {
