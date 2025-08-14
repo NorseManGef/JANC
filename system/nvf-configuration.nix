@@ -97,6 +97,13 @@
         } 
       ];
 
+      debugger.nvim-dap = {
+        enable = true;
+        ui = {
+          enable = true;
+        };
+      };
+
       statusline.lualine.enable = true;
 
       lineNumberMode = "number";
@@ -163,6 +170,9 @@
         rust.crates.enable = true;
         clang.enable = true;
         clang.lsp.server = "clangd";
+        clang.dap = {
+          enable = true;
+        };
       };
 
       visuals = {
