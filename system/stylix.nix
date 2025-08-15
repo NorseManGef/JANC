@@ -71,5 +71,6 @@
       stylix.targets.hyprland.enable = false;
       stylix.targets.vscode.enable = false;
       stylix.targets.mako.enable = false;
+      stylix.targets.firefox.enable = false;
     }];
 }
