@@ -23,7 +23,7 @@
 
     nvf.url = "github:notashelf/nvf";
     
-    textfox.url = "github:adriankarlen/textfox/b981cdb7f8c38d082ca1646855ec4192c9e1d5dd";
+    textfox.url = "github:adriankarlen/textfox";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
