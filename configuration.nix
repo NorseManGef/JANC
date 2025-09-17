@@ -103,10 +103,6 @@
       enable = true;
       capSysNice = true;
     };
-    alvr = {
-      enable = true;
-      openFirewall = true;
-    };
     neovim = {
       enable = true;
       defaultEditor = true;
