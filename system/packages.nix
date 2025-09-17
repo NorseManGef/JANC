@@ -41,6 +41,7 @@
     musikcube
     nicotine-plus
     protonvpn-gui
+    proton-authenticator
     networkmanagerapplet
     jdk17
     signal-desktop-bin
@@ -58,6 +59,7 @@
     grub2
     protonplus
     gh
+    android-udev-rules
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
