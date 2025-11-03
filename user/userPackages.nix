@@ -8,11 +8,13 @@
     atuin
     dunst
     btop
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     kdePackages.kdenlive
     heroic
     superTuxKart
     prismlauncher
     vintagestory
+    lmstudio
+    rpcs3
   ];
 }

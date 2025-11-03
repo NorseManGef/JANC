@@ -14,7 +14,7 @@
     hyprpicker
     swww
     wofi
-    firefox-wayland
+    firefox
     tor-browser
     qt5.qtwayland
     qt6.qmake
@@ -59,7 +59,6 @@
     grub2
     protonplus
     gh
-    android-udev-rules
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
