@@ -63,6 +63,12 @@
           noremap = false;
           action = "<Esc>";
         }
+        {
+          key = ">";
+          mode = "n";
+          noremap = false;
+          action = "<c-w>>";
+        }
       ];
 
       tabline = {
