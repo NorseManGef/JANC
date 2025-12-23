@@ -173,9 +173,10 @@
 
         nix.enable = true;
         rust.enable = true;
-        rust.crates.enable = true;
+        rust.extensions.crates-nvim.enable = true;
         clang.enable = true;
-        clang.lsp.server = "clangd";
+        clang.lsp.enable = true;
+        clang.lsp.servers = ["ccls"];
         clang.dap = {
           enable = true;
         };
@@ -243,7 +244,7 @@
         surround.enable = true;
 
         motion = {
-          hop.enable = true;
+          #hop.enable = true;
           leap.enable = true;
           precognition.enable = true;
         };

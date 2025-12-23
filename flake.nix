@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf.url = "github:notashelf/nvf";
+    nvf.url = "git+https://github.com/NotAShelf/nvf?ref=v0.8";
     
     textfox.url = "github:adriankarlen/textfox";
     firefox-addons = {
