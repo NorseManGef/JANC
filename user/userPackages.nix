@@ -16,5 +16,7 @@
     vintagestory
     lmstudio
     rpcs3
+    aseprite
+    krita
   ];
 }
