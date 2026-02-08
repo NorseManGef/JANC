@@ -60,8 +60,4 @@
     protonplus
     gh
   ];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-runtime-7.0.20"
-  ];
 }

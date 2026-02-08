@@ -196,7 +196,6 @@
       };
 
       experimental = {
-        xx_color_management_v4 = "true";
       };
     };
   };

@@ -9,7 +9,6 @@
     dunst
     btop
     onlyoffice-desktopeditors
-    kdePackages.kdenlive
     heroic
     superTuxKart
     prismlauncher
@@ -18,5 +17,12 @@
     rpcs3
     aseprite
     krita
+
+    bisq2
+    eigenwallet
+    monero-gui
+    electrum
+    p2pool
+    xmrig
   ];
 }

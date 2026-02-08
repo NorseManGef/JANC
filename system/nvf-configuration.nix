@@ -125,7 +125,9 @@
       telescope.enable = true;
 
       treesitter = {
+        enable = true;
         fold = true;
+        context.enable = true;
       };
 
       terminal = {
@@ -180,6 +182,7 @@
         clang.dap = {
           enable = true;
         };
+        python.enable = true;
       };
 
       visuals = {
