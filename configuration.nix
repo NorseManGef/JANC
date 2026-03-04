@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, isDesktop, ... }:
+{ inputs, pkgs, isDesktop, ... }:
 
 {
   imports =
@@ -6,7 +6,7 @@
       inputs.home-manager.nixosModules.home-manager
       inputs.hyprland.nixosModules.default
     ];
-  
+
   #use the latest linux kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
@@ -59,6 +59,13 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
+    jack = {
+      jackd.enable = true;
+      alsa.enable = false;
+      loopback = {
+        enable = true;
+      };
+    };
     hardware = {
       openrgb = {
         enable = true;
@@ -74,6 +81,7 @@
   };
 
   boot.kernelParams = [ "acpi_enforce_resources=lax" ]; # for openrgb
+  boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
 
   programs = {
     hyprland = {
@@ -129,6 +137,8 @@
       libvdpau-va-gl
     ];
   };
+
+  services.pulseaudio.package = pkgs.pulseaudio.override { jackaudiosupport = true; };
 
   hardware.bluetooth.enable = true;
 

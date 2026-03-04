@@ -7,7 +7,6 @@
     polkit
     polkit_gnome
     gparted
-    neovim
     dunst
     wlr-randr
     wl-clipboard
@@ -47,7 +46,6 @@
     signal-desktop-bin
     mpv
     sidequest
-    ungoogled-chromium
     wordgrinder
     libreoffice
     xdg-utils
@@ -59,5 +57,15 @@
     grub2
     protonplus
     gh
+
+    brave
+
+
+    ardour
+    renoise
+    decent-sampler
+    lsp-plugins
+    vital
+    cardinal
   ];
 }
