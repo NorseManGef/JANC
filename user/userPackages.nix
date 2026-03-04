@@ -10,7 +10,6 @@
     btop
     onlyoffice-desktopeditors
     heroic
-    superTuxKart
     prismlauncher
     vintagestory
     lmstudio

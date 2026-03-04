@@ -10,8 +10,9 @@
 
     settings = {
       monitor = if isDesktop then [
-        "DP-3, 2560x1440@165, 0x0, 1, bitdepth, 8"
-        "HDMI-A-1, 1920x1080@60, 2560x500, 1"
+        "DP-1, 2560x1440@165, 0x0, 1, bitdepth, 8"
+        "HDMI-A-1, 1920x1080@60, -1920x400, 1"
+        "HDMI-A-2, 1920x1080@60, 2560x400, 1"
       ] else [
         "eDP-1, 1920x1080@144, 0x0, 1"
         "HDMI-A-1, 1920x1080@60, 1920x0, 1"
@@ -174,16 +175,16 @@
       ];
 
       workspace = if isDesktop then [
-        "1,monitor:DP-3"
-        "2,monitor:HDMI-A-1"
-        "3,monitor:DP-3"
-        "4,monitor:HDMI-A-1"
-        "5,monitor:DP-3"
-        "6,monitor:HDMI-A-1"
-        "7,monitor:DP-3"
-        "8,monitor:HDMI-A-1"
-        "9,monitor:DP-3"
-        "10,monitor:HDMI-A-1"
+        "1,monitor:DP-1"
+        "2,monitor:HDMI-A-2"
+        "3,monitor:DP-1"
+        "4,monitor:HDMI-A-2"
+        "5,monitor:DP-1"
+        "6,monitor:HDMI-A-2"
+        "7,monitor:DP-1"
+        "8,monitor:HDMI-A-2"
+        "9,monitor:DP-1"
+        "10,monitor:HDMI-A-2"
       ] else [];
 
       gestures = if isDesktop == false then {

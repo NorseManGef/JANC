@@ -43,7 +43,7 @@
     proton-authenticator
     networkmanagerapplet
     jdk17
-    signal-desktop-bin
+    signal-desktop
     mpv
     sidequest
     wordgrinder
@@ -63,9 +63,13 @@
 
     ardour
     renoise
-    decent-sampler
+    #decent-sampler
     lsp-plugins
     vital
     cardinal
+    alsa-scarlett-gui
+    alsa-utils
+    pulseaudio
+    helvum
   ];
 }
