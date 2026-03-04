@@ -6,7 +6,7 @@
   programs.firefox.enable = true;
   programs.firefox.profiles.textfox.extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [ 
     ublock-origin
-    sidebery
+    #sidebery
     sponsorblock
     multi-account-containers
     proton-pass
