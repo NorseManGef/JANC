@@ -11,7 +11,7 @@
     settings = {
       monitor = if isDesktop then [
         "DP-1, 2560x1440@165, 0x0, 1, bitdepth, 8"
-        "HDMI-A-1, 1920x1080@60, -1920x400, 1"
+        "HDMI-A-1, 1920x1080@74.97, -1920x400, 1"
         "HDMI-A-2, 1920x1080@60, 2560x400, 1"
       ] else [
         "eDP-1, 1920x1080@144, 0x0, 1"
