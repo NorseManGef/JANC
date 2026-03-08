@@ -5,8 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-nvf.url = "github:nixos/nixpkgs/cad22e7d996aea55ecab064e84834289143e44a0";
 
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,10 +36,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-nvf, nixpkgs-stable, nvf, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-nvf, nvf, ... }@inputs: 
   let
     system = "x86_64-linux";
-    pkgs-stable = import nixpkgs-stable {inherit system; config.allowUnfree = true; };
   in {
     packages.x86_64-linux.shittynvim = 
         (nvf.lib.neovimConfiguration {
@@ -57,7 +54,6 @@
         specialArgs = {
           inherit inputs;
           inherit system;
-          inherit pkgs-stable;
           isDesktop = true;
         };
         modules = [
