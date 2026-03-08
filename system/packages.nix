@@ -5,7 +5,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     polkit
-    polkit_gnome
     gparted
     dunst
     wlr-randr
@@ -57,6 +56,8 @@
     grub2
     protonplus
     gh
+
+    sshfs
 
     brave
 
