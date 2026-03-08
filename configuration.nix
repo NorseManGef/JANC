@@ -101,6 +101,11 @@
     ssh = {
       startAgent = true;
       extraConfig = "
+        Host server
+        Hostname 10.0.0.18
+        Port 22
+        User server
+
         IdentityFile ~/.ssh/nixos-server
       ";
     };
