@@ -64,13 +64,13 @@
 
     ardour
     renoise
-    #decent-sampler
+    decent-sampler
     lsp-plugins
     vital
     cardinal
     alsa-scarlett-gui
     alsa-utils
     pulseaudio
-    helvum
+    crosspipe
   ];
 }
