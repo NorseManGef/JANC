@@ -10,7 +10,7 @@
           position = "top";
           height = 41;
           output = if isDesktop then [
-            "DP-1"
+            "DP-2"
             "HDMI-A-1"
             "HDMI-A-2"
           ] else [

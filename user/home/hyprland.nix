@@ -10,7 +10,8 @@
 
     settings = {
       monitor = if isDesktop then [
-        "DP-1, 2560x1440@165, 0x0, 1, bitdepth, 8"
+        "DP-2, 2560x1440@165, 0x0, 1, bitdepth, 8"
+        "DP-3, 3840x2160@60, 0x-1440, 1.5, bitdepth, 10, cm, hdr"
         "HDMI-A-1, 1920x1080@74.97, -1920x400, 1"
         "HDMI-A-2, 1920x1080@60, 2560x400, 1"
       ] else [
@@ -175,15 +176,15 @@
       ];
 
       workspace = if isDesktop then [
-        "1,monitor:DP-1"
+        "1,monitor:DP-2"
         "2,monitor:HDMI-A-2"
-        "3,monitor:DP-1"
+        "3,monitor:DP-2"
         "4,monitor:HDMI-A-2"
-        "5,monitor:DP-1"
+        "5,monitor:DP-2"
         "6,monitor:HDMI-A-2"
-        "7,monitor:DP-1"
+        "7,monitor:DP-2"
         "8,monitor:HDMI-A-2"
-        "9,monitor:DP-1"
+        "9,monitor:DP-2"
         "10,monitor:HDMI-A-2"
       ] else [];
 
