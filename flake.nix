@@ -11,6 +11,7 @@
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -33,6 +34,7 @@
 
     musnix  = { 
       url = "github:musnix/musnix"; 
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
