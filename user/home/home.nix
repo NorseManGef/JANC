@@ -18,15 +18,6 @@
     enable = true;
   };
 
-  programs.iamb = {
-    enable = true;
-    settings = {
-      profiles.user.user_id = "@norsemangef:excd.com";
-      profiles.user.url = "https://matrix.excd.com";
-      notifications.enabled = true;
-    };
-  };
-
   home.sessionVariables = {
     EDITOR = "neovim";
   };
