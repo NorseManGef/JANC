@@ -12,7 +12,6 @@
     heroic
     prismlauncher
     vintagestory
-    lmstudio
     rpcs3
     aseprite
     krita
@@ -21,7 +20,5 @@
     eigenwallet
     monero-gui
     electrum
-    p2pool
-    xmrig
   ];
 }

@@ -33,7 +33,6 @@
     quickemu
     gimp
     i2c-tools
-    bottles
     usbutils
     udiskie
     musikcube
@@ -56,6 +55,9 @@
     grub2
     protonplus
     gh
+    lmstudio
+    llama-cpp-rocm
+    rocmPackages.rocminfo
 
     sshfs
 
