@@ -110,7 +110,7 @@
 
     statusline.lualine.enable = true;
 
-    #lineNumberMode = "number";
+    lineNumberMode = "number";
     autocomplete.nvim-cmp.enable = true;
     autocomplete.nvim-cmp.mappings = {
       close = "<C-e>";
@@ -165,6 +165,8 @@
           require("lint").try_lint()
         end
       '';
+
+      lint_after_save = true;
     };
 
     languages = {
@@ -176,7 +178,7 @@
       rust.extensions.crates-nvim.enable = true;
       clang.enable = true;
       clang.lsp.enable = true;
-      clang.lsp.servers = ["ccls"];
+      clang.lsp.servers = ["clangd"];
       clang.dap = {
         enable = true;
       };
