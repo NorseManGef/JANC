@@ -57,27 +57,7 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      wireplumber = {
-        enable = true;
-        extraConfig."disable-acp" = {
-          "monitor.alsa.rules" = [
-            {
-              matches = [
-                {
-                  "device.name" = "~alsa_card.*";
-                }
-              ];
-              actions = {
-                update-props = {
-                  "api.alsa.use-acp" = false;
-                  "api.acp.auto-profile" = false;
-                  "api.acp.auto-port" = false;
-                };
-              };
-            }
-          ];
-        };
-      };
+      wireplumber.enable = true;
     };
     jack = {
       jackd.enable = true;
@@ -166,6 +146,8 @@
       libvdpau-va-gl
     ];
   };
+
+  services.pulseaudio.package = pkgs.pulseaudio.override { jackaudiosupport = true; };
 
   hardware.bluetooth.enable = true;
 

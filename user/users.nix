@@ -5,7 +5,7 @@
   users.users.norsemangef = {
     isNormalUser = true;
     description = "norsemangef";
-    extraGroups = [ "networkmanager" "audio" "wheel" "adbusers" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd" ];
   };
 
   home-manager = {
