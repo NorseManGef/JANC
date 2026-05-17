@@ -4,6 +4,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
+    #configType = "hyprlang";
+
     #systemd.enable = false;
 
     package = pkgs.hyprland;
@@ -77,7 +79,6 @@
       };
 
       dwindle = {
-        pseudotile = "yes";
         preserve_split = "yes";
       };
 
@@ -102,8 +103,7 @@
         "$mainMod, C, killactive,"
         "$mainMod SHIFT, M, exit,"
         "$mainMod, SPACE, togglefloating,"
-        "$mainMod, P, pseudo,"
-        "$mainMod, G, togglesplit,"
+        #"$mainMod, G, togglesplit,"
         "$mainMod, F12, exec, hyprshot -m output --clipboard-only"
         "$mainMod SHIFT, F12, exec, hyprshot -m window --clipboard-only"
         "$mainMod, F11, fullscreen,"

@@ -37,7 +37,7 @@
     udiskie
     musikcube
     nicotine-plus
-    protonvpn-gui
+    proton-vpn
     proton-authenticator
     networkmanagerapplet
     jdk17
