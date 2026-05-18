@@ -21,7 +21,7 @@
         winboot = if isDesktop then "sudo grub-reboot 2 && reboot" else "echo \"You're on your laptop silly, there's no winblows here\"";
         cppinit = "gh repo create --clone --private --template ssh://git@github.com/NorseManGef/cpp-template";
         nswitch-server = "cd /home/norsemangef/nixos-server && nixos-rebuild --flake .#server --target-host server@server --sudo --ask-sudo-password switch";
-        nswitch-server-upgrade = "cd /home/norsemangef/nixos-server && sudo nix flake update && nixos-rebuild --flake .#server --target-host server@server --sudo --ask-sudo-password switch";
+        nswitch-server-upgrade = "cd /home/norsemangef/nixos-server && nix flake update && nixos-rebuild --flake .#server --target-host server@server --sudo --ask-sudo-password switch";
       };
     };
     starship = {
