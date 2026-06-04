@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf.url = "git+https://github.com/NotAShelf/nvf?ref=v0.8";
+    nvf.url = "git+https://github.com/NotAShelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs-nvf";
     
     textfox.url = "github:adriankarlen/textfox";

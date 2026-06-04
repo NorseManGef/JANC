@@ -16,7 +16,7 @@
 
   gtk = {
     enable = true;
-    gtk4.theme = null;
+    #gtk4.theme = null;
   };
 
   home.sessionVariables = {
