@@ -109,11 +109,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1780602239,
-        "narHash": "sha256-EtBSmqZn3oCmfZbyUbRqMUAclm5AlD4hDo4Qdj5X52s=",
+        "lastModified": 1780804967,
+        "narHash": "sha256-Z2nOP600ATQLLHHemhHtYDjWyAqgLrVsozznIkvnkYY=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "ef4b88dd2caa60399b237a3bfa1205bb1064e7af",
+        "rev": "f15cdd20d0845728919ad067ff43bdd334b4b344",
         "type": "gitlab"
       },
       "original": {
@@ -275,11 +275,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780593650,
-        "narHash": "sha256-CHo7k65YTL3HY+WQVedDTupji+LMgNlKCdrtRHZFAK4=",
+        "lastModified": 1780679734,
+        "narHash": "sha256-KmRNvpNOb7QEORa06bVgjW9kITcx0VhsI7w0vhmZyD8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "447fd9ff62501dae7206dfe180ee89f8de27b7d5",
+        "rev": "b2b7db486e06e098711dc291bb25db82850e1d16",
         "type": "github"
       },
       "original": {
@@ -365,11 +365,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1780606688,
-        "narHash": "sha256-Tjs9YzBf8/WK+N8BPHY65e6dNkXEhYt7YnG14G8C334=",
+        "lastModified": 1780768552,
+        "narHash": "sha256-sHtVg0Fpvd8dFcI5oKGYwe4zEYxgS2LwhWVzwDXePpc=",
         "ref": "refs/heads/main",
-        "rev": "7b422dd2b822ab3859cf8b7171e1e0f98cd22e4b",
-        "revCount": 7418,
+        "rev": "20ee7553c95dd1fa30a00564561f40f7986ffbc7",
+        "revCount": 7423,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -783,11 +783,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1780511420,
-        "narHash": "sha256-Ib44d47GTijSfCtcxFDliP3C9uUiLDYaAE/nVH8TQoY=",
+        "lastModified": 1780650009,
+        "narHash": "sha256-zUN3BFopCC9J7g8cQO69s93EKCKApSwRlLWMC2bI+GY=",
         "ref": "refs/heads/main",
-        "rev": "29f7eb8491d9833ee55006ab11169130a60c2652",
-        "revCount": 3398,
+        "rev": "0b92b1783de48499303fc6e61478da34ee124482",
+        "revCount": 3401,
         "type": "git",
         "url": "https://github.com/NotAShelf/nvf"
       },
@@ -853,11 +853,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1780584783,
-        "narHash": "sha256-b4o1AlQpGgpUfieaNz/3gsSzogjoiczmnlbDj0khImY=",
+        "lastModified": 1780701809,
+        "narHash": "sha256-u7AUNs6U6eD1os4+ghbr1gH4QjPWzOdKvpeM+E+XRKM=",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "6b6b874d082928aa9557e21516d4fe2f2bb305e1",
+        "rev": "3a02d9f73608641b28e08b26acb0b0b47c05f14b",
         "type": "github"
       },
       "original": {

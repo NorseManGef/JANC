@@ -10,7 +10,7 @@
     wlr-randr
     wl-clipboard
     hyprpicker
-    swww
+    awww
     wofi
     firefox
     tor-browser
