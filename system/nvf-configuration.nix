@@ -183,6 +183,7 @@
         enable = true;
       };
       python.enable = true;
+      cmake.enable = true;
     };
 
     visuals = {
