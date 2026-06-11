@@ -172,6 +172,7 @@
     languages = {
       enableTreesitter = true;
       enableFormat = true;
+      enableDAP = true;
 
       nix.enable = true;
       rust.enable = true;
@@ -184,6 +185,7 @@
       };
       python.enable = true;
       cmake.enable = true;
+      glsl.enable = true;
     };
 
     visuals = {
