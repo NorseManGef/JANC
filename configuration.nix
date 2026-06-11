@@ -59,24 +59,24 @@
       pulse.enable = true;
       wireplumber = {
         enable = true;
-        extraConfig."disable-acp" = {
-          "monitor.alsa.rules" = [
-            {
-              matches = [
-                {
-                  "device.name" = "~alsa_card.*";
-                }
-              ];
-              actions = {
-                update-props = {
-                  "api.alsa.use-acp" = false;
-                  "api.acp.auto-profile" = false;
-                  "api.acp.auto-port" = false;
-                };
-              };
-            }
-          ];
-        };
+         #extraConfig."disable-acp" = {
+         #  "monitor.alsa.rules" = [
+         #    {
+         #      matches = [
+         #        {
+         #          "device.name" = "~alsa_card.*";
+         #        }
+         #      ];
+         #      actions = {
+         #        update-props = {
+         #          "api.alsa.use-acp" = false;
+         #          "api.acp.auto-profile" = false;
+         #          "api.acp.auto-port" = false;
+         #        };
+         #      };
+         #    }
+         #  ];
+         #};
       };
     };
     jack = {
