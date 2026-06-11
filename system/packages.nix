@@ -55,14 +55,8 @@
     grub2
     protonplus
     gh
-    lmstudio
-    llama-cpp-rocm
-    rocmPackages.rocminfo
-
     sshfs
-
     brave
-
 
     ardour
     renoise
@@ -72,7 +66,6 @@
     cardinal
     alsa-scarlett-gui
     alsa-utils
-    pulseaudio
     crosspipe
   ];
 }
