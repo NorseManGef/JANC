@@ -57,6 +57,7 @@
     gh
     sshfs
     brave
+    element-desktop 
 
     ardour
     renoise
