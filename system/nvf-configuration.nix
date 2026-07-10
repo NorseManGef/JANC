@@ -184,8 +184,7 @@
         enable = true;
       };
       python.enable = true;
-      cmake.enable = true;
-      glsl.enable = true;
+      #cmake.enable = true;
     };
 
     visuals = {
