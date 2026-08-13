@@ -116,8 +116,8 @@
       close = "<C-e>";
       complete = "<C-Space>";
       confirm = "<C-CR>";
-      next = "<Tab>";
-      previous = "<S-Tab>";
+      next = "<S-Tab>";
+      previous = "<C-Tab>";
     };
 
     telescope.enable = true;

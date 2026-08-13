@@ -52,7 +52,7 @@
 
       sizes = {
 	    applications = 12;
-	    terminal = 15;
+	    terminal = 13;
 	    popups = 10;
       };
     };

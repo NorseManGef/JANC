@@ -15,6 +15,7 @@
     rpcs3
     aseprite
     krita
+    lutris
 
     bisq2
     eigenwallet

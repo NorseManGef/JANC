@@ -20,7 +20,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "neovim";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
