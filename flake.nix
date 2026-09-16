@@ -10,13 +10,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland.inputs.nixpkgs.follows = "nixpkgs";
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
+    umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
+    umbriel.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix = {
       url = "github:nix-community/stylix";

@@ -4,7 +4,7 @@
   imports =
     [
       inputs.home-manager.nixosModules.home-manager
-      inputs.hyprland.nixosModules.default
+      inputs.umbriel.nixosModules.default
     ];
 
   #use the latest linux kernel
@@ -35,7 +35,6 @@
   # Security
   security = {
     rtkit.enable = true;
-    pam.services.hyprlock = {};
     #sudo-rs.enable = true;
   };
 
@@ -87,10 +86,8 @@
   boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
 
   programs = {
-    hyprland = {
+    umbriel = {
       enable = true;
-      package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
-      xwayland.enable = true;
     };
     waybar = {
       enable = true;
@@ -164,11 +161,6 @@
   nix.optimise = {
     dates = ["daily"];
     automatic = true;
-  };
-
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   environment.sessionVariables = {

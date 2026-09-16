@@ -21,7 +21,6 @@
     adwaita-qt6
     pavucontrol
     git
-    hyprlock
     fastfetch
     wine
     wine-wayland

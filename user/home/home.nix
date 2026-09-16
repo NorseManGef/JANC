@@ -9,8 +9,8 @@
     ./../userPackages.nix
     ./dunst.nix
     ./shell-settings.nix
+    ./umbriel.nix
     ./waybar.nix
-    ./hyprland.nix
     ./textfox.nix
   ];
 
