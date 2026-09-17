@@ -81,7 +81,7 @@
           position = [0 (-1440)];
           scale = 1.5;
           workspaces = ["TV"];
-          hdr = "auto";
+          hdr = "fullscreen";
         };
 
         "HDMI-A-1" = {
