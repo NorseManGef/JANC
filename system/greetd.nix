@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland --asterisks";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-umbriel --asterisks";
         user = "norsemangef";
       };
     };
