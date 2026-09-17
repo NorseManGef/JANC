@@ -57,6 +57,13 @@
         "Mod+5" = "workspace-switch:3/DP-2";
         "Mod+6" = "workspace-switch:3/HDMI-A-2";
 
+        "Mod+Shift+1" = "window-move-to-workspace:1/DP-2";
+        "Mod+Shift+2" = "window-move-to-workspace:1/HDMI-A-2";
+        "Mod+Shift+3" = "window-move-to-workspace:2/DP-2";
+        "Mod+Shift+4" = "window-move-to-workspace:2/HDMI-A-2";
+        "Mod+Shift+5" = "window-move-to-workspace:3/DP-2";
+        "Mod+Shift+6" = "window-move-to-workspace:3/HDMI-A-2";
+
         "Mod+Shift+Tab" = "window-move-to-scratchpad";
         "Alt+Tab" = "scratchpad-toggle";
         "Ctrl+Alt+Tab" = "window-restore-from-scratchpad";
