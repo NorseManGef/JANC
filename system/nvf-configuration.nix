@@ -77,6 +77,7 @@
       vim.filetype.add({
         extension = {
           inc = "cpp",
+          shd = "glsl",
         }
       })
     '';
@@ -94,6 +95,7 @@
           "*.h"
           "*.inc"
           "cpp"
+          "*.shd"
         ]; 
         callback = lib.mkLuaInline '' 
           function() vim.bo.tabstop = 4 vim.bo.shiftwidth = 4 end
@@ -126,6 +128,9 @@
       enable = true;
       fold = true;
       context.enable = true;
+      indent = {
+        enable = false;
+      };
     };
 
     terminal = {
@@ -177,14 +182,22 @@
       nix.enable = true;
       rust.enable = true;
       rust.extensions.crates-nvim.enable = true;
-      clang.enable = true;
-      clang.lsp.enable = true;
-      clang.lsp.servers = ["clangd"];
-      clang.dap = {
+
+      clang = {
         enable = true;
+        lsp = {
+          enable = true;
+          servers = ["clangd"];
+        };
+        dap = {
+          enable = true;
+        };
       };
       python.enable = true;
-      #cmake.enable = true;
+      cmake.enable = true;
+
+      glsl.enable = true;
+      glsl.lsp.enable = true;
     };
 
     visuals = {
@@ -239,7 +252,6 @@
     binds = {
       whichKey.enable = true;
       cheatsheet.enable = true;
-      hardtime-nvim.enable = false;
     };
 
     utility = {
