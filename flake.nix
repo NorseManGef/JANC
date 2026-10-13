@@ -18,8 +18,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf.url = "git+https://github.com/NotAShelf/nvf?rev=8e031476d0d7f326b63c9c5522f840e2f8b724c0";
-    nvf.inputs.nixpkgs.follows = "nixpkgs-nvf";
+    nvf.url = "git+https://github.com/NotAShelf/nvf?rev=3d8c91925ea9b6bb70dcdaa4544cd12a95194fc5";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
     
     textfox.url = "github:adriankarlen/textfox";
     firefox-addons = {
