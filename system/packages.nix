@@ -22,8 +22,9 @@
     pavucontrol
     git
     fastfetch
-    wine
-    wine-wayland
+    wineWow64Packages.stable
+    winetricks
+    mono
     hyprshot
     protontricks
     vesktop
@@ -39,7 +40,7 @@
     proton-vpn
     proton-authenticator
     networkmanagerapplet
-    jdk17
+    jdk25
     signal-desktop
     mpv
     sidequest
