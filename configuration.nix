@@ -20,6 +20,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Kernel patch for pimax headset
+  boot.kernelPatches = [
+    {
+      name = "pimax-crystal-light-edid-patch";
+      patch = ./pimaxedid.patch;
+    }
+    {
+      name = "pimax-no-ddos-patch";
+      patch = ./pimax_no_ddos.patch;
+    }
+  ];
+
   # XDG Portals
   xdg = {
     autostart.enable = true;
@@ -78,6 +90,14 @@
     gvfs.enable = true;
     udisks2.enable = true;
     devmon.enable = true;
+
+    udev.extraRules = ''
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="34a4", MODE="0666"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="34a4", MODE="0666"
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="0424", MODE="0666"
+      SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0424", MODE="0666"
+      SUBSYSTEM=="input", ATTRS{idVendor}=="34a4", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+    '';
 
     gnome.gnome-keyring.enable = true;
   };

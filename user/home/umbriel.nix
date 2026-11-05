@@ -13,18 +13,18 @@
       };
 
       keybinds = {
-        "Mod+Q" = "spawn:alacritty";
-        "Mod+F" = "spawn:firefox";
-        "Mod+D" = "spawn:vesktop";
-        "Mod+E" = "spawn:thunar";
-        "Mod+S" = "spawn:steam";
+        "Mod+Q" = "spawn alacritty";
+        "Mod+F" = "spawn firefox";
+        "Mod+D" = "spawn vesktop";
+        "Mod+E" = "spawn thunar";
+        "Mod+S" = "spawn steam";
 
-        "Mod+R" = "spawn:wofi --show drun";
+        "Mod+R" = "spawn wofi --show drun";
         "Mod+C" = "window-close";
         "Mod+M" = "session-quit";
         "Mod+Space" = "window-toggle-floating";
-        "Mod+F12" = "spawn:hyprshot -m output --clipboard-only";
-        "Mod+Shift+F12" = "spawn:hyprshot -m window --clipboard-only";
+        "Mod+F12" = "spawn hyprshot -m output --clipboard-only";
+        "Mod+Shift+F12" = "spawn hyprshot -m window --clipboard-only";
         "Mod+F11" = "window-toggle-fullscreen";
         "Mod+O" = "overview-toggle";
 
@@ -41,28 +41,28 @@
         "Mod+Alt+H" = "window-consume-or-expel-left";
         "Mod+Alt+L" = "window-consume-or-expel-right";
 
-        "Ctrl+Shift+H" = "window-modify-width-left:.1";
-        "Ctrl+Shift+L" = "window-modify-width-right:.1";
-        "Ctrl+Shift+K" = "window-modify-height-up:.1";
-        "Ctrl+Shift+J" = "window-modify-height-down:.1";
-        "Ctrl+Alt+H" = "window-modify-width-right:-.1";
-        "Ctrl+Alt+L" = "window-modify-width-left:-.1";
-        "Ctrl+Alt+K" = "window-modify-height-down:-.1";
-        "Ctrl+Alt+J" = "window-modify-height-up:-.1";
+        "Ctrl+Shift+H" = "window-modify-width-left .1";
+        "Ctrl+Shift+L" = "window-modify-width-right .1";
+        "Ctrl+Shift+K" = "window-modify-height-up .1";
+        "Ctrl+Shift+J" = "window-modify-height-down .1";
+        "Ctrl+Alt+H" = "window-modify-width-right -.1";
+        "Ctrl+Alt+L" = "window-modify-width-left -.1";
+        "Ctrl+Alt+K" = "window-modify-height-down -.1";
+        "Ctrl+Alt+J" = "window-modify-height-up -.1";
 
-        "Mod+1" = "workspace-switch:1/DP-2";
-        "Mod+2" = "workspace-switch:1/HDMI-A-2";
-        "Mod+3" = "workspace-switch:2/DP-2";
-        "Mod+4" = "workspace-switch:2/HDMI-A-2";
-        "Mod+5" = "workspace-switch:3/DP-2";
-        "Mod+6" = "workspace-switch:3/HDMI-A-2";
+        "Mod+1" = "workspace-switch 1 --output DP-2";
+        "Mod+2" = "workspace-switch 1 --output HDMI-A-2";
+        "Mod+3" = "workspace-switch 2 --output DP-2";
+        "Mod+4" = "workspace-switch 2 --output HDMI-A-2";
+        "Mod+5" = "workspace-switch 3 --output DP-2";
+        "Mod+6" = "workspace-switch 3 --output HDMI-A-2";
 
-        "Mod+Shift+1" = "window-move-to-workspace:1/DP-2";
-        "Mod+Shift+2" = "window-move-to-workspace:1/HDMI-A-2";
-        "Mod+Shift+3" = "window-move-to-workspace:2/DP-2";
-        "Mod+Shift+4" = "window-move-to-workspace:2/HDMI-A-2";
-        "Mod+Shift+5" = "window-move-to-workspace:3/DP-2";
-        "Mod+Shift+6" = "window-move-to-workspace:3/HDMI-A-2";
+        "Mod+Shift+1" = "window-move-to-workspace 1 --output DP-2";
+        "Mod+Shift+2" = "window-move-to-workspace 1 --output HDMI-A-2";
+        "Mod+Shift+3" = "window-move-to-workspace 2 --output DP-2";
+        "Mod+Shift+4" = "window-move-to-workspace 2 --output HDMI-A-2";
+        "Mod+Shift+5" = "window-move-to-workspace 3 --output DP-2";
+        "Mod+Shift+6" = "window-move-to-workspace 3 --output HDMI-A-2";
 
         "Mod+Shift+Tab" = "window-move-to-scratchpad";
         "Alt+Tab" = "scratchpad-toggle";

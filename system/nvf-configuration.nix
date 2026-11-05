@@ -180,8 +180,14 @@
       enableDAP = true;
 
       nix.enable = true;
-      rust.enable = true;
-      rust.extensions.crates-nvim.enable = true;
+
+      rust = {
+        enable = true;
+        extensions.crates-nvim.enable = true;
+        extensions.ferris-nvim.enable = true;
+        dap.enable = true;
+        lsp.enable = true;
+      };
 
       clang = {
         enable = true;

@@ -38,19 +38,17 @@
     musikcube
     nicotine-plus
     proton-vpn
-    proton-authenticator
+    proton-pass
     networkmanagerapplet
     jdk25
     signal-desktop
     mpv
-    sidequest
     wordgrinder
     libreoffice
     xdg-utils
     wget
     mangohud
     lact
-    proton-pass
     vkquake
     grub2
     protonplus
@@ -58,6 +56,7 @@
     sshfs
     brave
     element-desktop 
+    vkd3d-proton
 
     ardour
     renoise
