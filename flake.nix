@@ -46,6 +46,8 @@
         }
       ).neovim;
 
+    packages.x86_64-linux.betterbasalt = nixpkgs.legacyPackages.x86_64-linux.callPackage ./basalt_package/package.nix {};
+
     nixosConfigurations = {
       nixos-desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -55,7 +57,14 @@
         };
         modules = [
 	        ({pkgs, ...}: {
-	          environment.systemPackages = [self.packages.${pkgs.stdenv.system}.shittynvim];
+	          environment.systemPackages = [
+              self.packages.${pkgs.stdenv.system}.shittynvim
+              self.packages.${pkgs.stdenv.system}.betterbasalt
+            ];
+            environment.sessionVariables = {
+              VIT_SYSTEM_LIBRARY_PATH = "${pkgs.lib.getLib 
+                self.packages.${pkgs.stdenv.system}.betterbasalt}/lib/libbasalt.so"; 
+            };
 	        })
 
           ./hosts/desktop/hardware-configuration.nix

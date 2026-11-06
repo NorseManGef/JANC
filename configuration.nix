@@ -100,6 +100,10 @@
     '';
 
     gnome.gnome-keyring.enable = true;
+
+    desktopManager.plasma6 = {
+      enable = true;
+    };
   };
 
   boot.kernelParams = [ "acpi_enforce_resources=lax" ]; # for openrgb
